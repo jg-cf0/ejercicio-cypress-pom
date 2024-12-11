@@ -1,0 +1,17 @@
+cypress-e2e-test:
+  image: 
+    name: cypress/browsers:node18.12.0-chrome103-ff107 
+    entrypoint: [""]
+  stage: test
+  script:
+    - npm ci
+    - mkdir -p cypress/  # Asegurarse de que el directorio cypress/ exista
+    - npm start &
+    - ls -R cypress/e2e  # Verificar los archivos en la ruta
+    - npx cypress run --spec "cypress/e2e/todo.cy.js" --browser chrome || true
+  artifacts:
+    paths: 
+      - cypress/
+    when: always
+  only:
+    - main
