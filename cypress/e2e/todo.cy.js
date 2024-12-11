@@ -1,4 +1,4 @@
-import { todoPage } from "../support/pageObjects/todoPage"; // Importamos todoPage de la carpeta especificada
+import { todoPage } from "../support/pageObjects/todoPage.js"; // Importamos todoPage de la carpeta especificada
 
 describe("Pruebas Cypress con Page Object Model", () => {
   beforeEach(() => {
