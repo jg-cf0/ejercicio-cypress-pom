@@ -26,4 +26,4 @@ jobs:
       run: chmod +x ./node_modules/.bin/cypress
 
     - name: Run Cypress Tests
-      run: npx cypress run --spec cypress/e2e/todo.cy.js || true
+      run: npx cypress run --spec cypress/e2e/todo.cy.js
